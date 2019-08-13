@@ -1,0 +1,15 @@
+{
+  "apps": [{
+    "name": "hzau-info",
+    "script": "index.js",
+    "cwd": "/home/uftp/hzau-info/lib",
+    "exec_mode": "fork",
+    "max_memory_restart": "500M",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}

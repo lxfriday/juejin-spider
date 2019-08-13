@@ -1,0 +1,25 @@
+{
+  "name": "juejin-spider",
+  "version": "1.0.0",
+  "description": "抓取掘金文章和作者信息，分析排行",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node App.js",
+    "build": "babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.1.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "iconv-lite": "^0.4.23",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1"
+  }
+}
