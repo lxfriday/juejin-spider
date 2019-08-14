@@ -11,6 +11,11 @@ switch (task) {
     require('./src/composeArticleData')
     break
   }
+  case 'userData': {
+    require('./src/getAllUsers')
+    break
+  }
+
   default: {
   }
 }

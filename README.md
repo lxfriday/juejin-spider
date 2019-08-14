@@ -11,3 +11,9 @@
 组合后的文章原始数据分片文件
 
 ![](./imgs/composedData.png)
+
+## `src/assets/userData`
+所有用户信息的数据
+
+![](./imgs/userData.png)
+![](./imgs/userData2.png)
