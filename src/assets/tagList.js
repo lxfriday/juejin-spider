@@ -9,7 +9,7 @@ const token =
 
 /**
  * 标签下的文章列表
- * 
+ *
  * @method GET
  * @param page 当前的 page
  */
@@ -33,7 +33,7 @@ const tagArticleListUrl = (tagId, page, pageSize = 100, sort = 'hotIndex') => {
 const tagList = [
   {
     id: '5597a05ae4b08a686ce56f6f', // tag 的 id
-    title: '前端',  // tag 的标题
+    title: '前端', // tag 的标题
     createdAt: '2015-07-04T00:59:06Z',
     updatedAt: '2017-06-18T23:34:05Z',
     color: '#60ADFF',
