@@ -2,15 +2,28 @@
   "name": "juejin-spider",
   "version": "1.0.0",
   "description": "抓取掘金文章和作者信息，分析排行",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
     "start": "npm run userData",
     "allTagData": "TASK=allTagData node App.js",
     "composeArticleData": "TASK=composeArticleData node App.js",
-    "userData": "TASK=userData node App.js"
+    "userData": "TASK=userData node App.js",
+    "lint": "eslint ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "lxfriday",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "async": "^3.1.0",
     "chalk": "^2.4.2",
@@ -19,5 +32,14 @@
     "iconv-lite": "^0.4.23",
     "request": "^2.85.0",
     "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.3",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2"
   }
 }
