@@ -2,6 +2,6 @@ node_modules/
 package-lock.json
 lib/
 
-src/assets/articleData/
-src/assets/composedData/
-src/assets/userData/
+src/assets/articleData/*.json
+src/assets/composedData/*.json
+src/assets/userData/*.json
