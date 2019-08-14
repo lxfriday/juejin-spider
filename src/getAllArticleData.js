@@ -41,7 +41,7 @@ async function spider({ id, title, entryCount, subscribersCount }, cb) {
       }
 
       articleCount += res.length
-      saveData(fileName, res)
+      saveData('articleData', fileName + '.json', res)
 
       console.log(
         `排名： ${rank}, id： ${id}, 标题： ${title}, 文章数： ${entryCount}, 关注数： ${subscribersCount}`

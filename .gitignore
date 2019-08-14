@@ -3,3 +3,4 @@ package-lock.json
 lib/
 
 src/assets/articleData/
+src/assets/composedData/

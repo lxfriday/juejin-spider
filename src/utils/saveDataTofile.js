@@ -13,11 +13,7 @@ function escape(fileName) {
   return newName
 }
 
-module.exports = (fileName, data) => {
-  const filePath = path.resolve(
-    __dirname,
-    '../assets/articleData',
-    escape(fileName) + '.json'
-  )
+module.exports = (dir, fileName, data) => {
+  const filePath = path.resolve(__dirname, '../assets', dir, escape(fileName))
   fs.writeFileSync(filePath, JSON.stringify(data))
 }
