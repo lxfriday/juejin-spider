@@ -36,7 +36,7 @@ saveDataTofile('calcDianzanRank', `点赞rank.json`, target)
 // save as md
 function generateMd() {
   const title = '# 点赞排行 \r\n\r\n'
-  let content = ''
+  let content = '👍 点赞数，📌 标签 \r\n'
   target.forEach((v, i) => {
     content += `- (${i + 1})[👍 ${v.collectionCount}][📌 ${v.tags[0].title}] [${
       v.title

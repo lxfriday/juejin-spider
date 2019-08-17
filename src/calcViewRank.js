@@ -40,7 +40,7 @@ saveDataTofile('calcViewRank', `浏览量rank.json`, target)
 // save as md
 function generateMd() {
   const title = '# 浏览量排行 \r\n\r\n'
-  let content = ''
+  let content = '👀 浏览量，📌 标签 \r\n'
   target.forEach((v, i) => {
     content += `- (${i + 1})[👀 ${v.viewsCount}][📌 ${v.tags[0].title}] [${
       v.title
