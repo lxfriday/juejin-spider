@@ -44,7 +44,7 @@
       }
     },
     "collectedEntriesCount": 154, // 点赞数
-    "company": "小米", // 公司
+    "company": "xxx", // 公司
     "followersCount": 35, // 被关注数
     "followeesCount": 70, // 关注数
     "role": "guest", // 用户角色
