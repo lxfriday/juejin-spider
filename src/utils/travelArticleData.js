@@ -10,6 +10,10 @@ const async = require('async')
 const articleDirPath = path.resolve(__dirname, '../assets/articleData/')
 
 function travelJsonFileData(fileName, cb, travelFunc) {
+  if (fileName.split('.')[1] !== 'json') {
+    cb()
+    return
+  }
   console.log(chalk.blue('fileName => ', fileName))
 
   const filePath = path.resolve(articleDirPath, fileName)

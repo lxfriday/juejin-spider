@@ -15,7 +15,10 @@ switch (task) {
     require('./src/getAllUsers')
     break
   }
-
+  case 'dianzan': {
+    require('./src/calcDianzanRank')
+    break
+  }
   default:
     break
 }

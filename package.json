@@ -4,10 +4,11 @@
   "description": "抓取掘金文章和作者信息，分析排行",
   "main": "App.js",
   "scripts": {
-    "start": "npm run userData",
+    "start": "npm run dianzan",
     "allTagData": "TASK=allTagData node App.js",
     "composeArticleData": "TASK=composeArticleData node App.js",
     "userData": "TASK=userData node App.js",
+    "dianzan": "TASK=dianzan node App.js",
     "lint": "eslint .",
     "test": "jest"
   },

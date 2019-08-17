@@ -6,14 +6,19 @@ const path = require('path')
 const fs = require('fs')
 
 function escape(fileName) {
+  // eslint-disable-next-line no-useless-escape
   const reg = /[\/]/g
-  const newName = fileName.replace(reg, match => {
+  const newName = fileName.replace(reg, () => {
     return '_'
   })
   return newName
 }
 
-module.exports = (dir, fileName, data) => {
+module.exports = (dir, fileName, data, stringify = true) => {
   const filePath = path.resolve(__dirname, '../assets', dir, escape(fileName))
-  fs.writeFileSync(filePath, JSON.stringify(data))
+  if (stringify) {
+    fs.writeFileSync(filePath, JSON.stringify(data))
+  } else {
+    fs.writeFileSync(filePath, data)
+  }
 }
