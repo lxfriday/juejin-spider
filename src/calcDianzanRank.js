@@ -38,9 +38,9 @@ function generateMd() {
   const title = '# 点赞排行 \r\n\r\n'
   let content = ''
   target.forEach((v, i) => {
-    content += `- (${i + 1})[👍 ${v.collectionCount}] [${v.title}](${
-      v.originalUrl
-    }) \r\n`
+    content += `- (${i + 1})[👍 ${v.collectionCount}][📌 ${v.tags[0].title}] [${
+      v.title
+    }](${v.originalUrl}) \r\n`
   })
 
   saveDataTofile('calcDianzanRank', `点赞rank.md`, title + content, false)
