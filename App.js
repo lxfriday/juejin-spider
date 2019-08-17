@@ -27,6 +27,10 @@ switch (task) {
     require('./src/calcCommentRank')
     break
   }
+  case 'follower': {
+    require('./src/calcUserRank')
+    break
+  }
 
   default:
     break
