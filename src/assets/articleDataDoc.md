@@ -13,7 +13,7 @@
   "checkStatus": true,
   "isEvent": false,
   "entryView": "",
-  "subscribersCount": 0, // 收藏
+  "subscribersCount": 0, // 无用
   "ngxCachedTime": 1565627197,
   "verifyStatus": true,
   "tags": [

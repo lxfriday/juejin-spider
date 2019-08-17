@@ -19,6 +19,10 @@ switch (task) {
     require('./src/calcDianzanRank')
     break
   }
+  case 'view': {
+    require('./src/calcViewRank')
+    break
+  }
   default:
     break
 }
