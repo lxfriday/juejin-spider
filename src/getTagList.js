@@ -2,6 +2,7 @@
  * 获取掘金标签列表
  * @author lxfriday
  */
+const chalk = require('chalk')
 const request = require('request-promise')
 const saveData = require('./utils/saveDataTofile')
 
@@ -21,5 +22,6 @@ const requestHeaders = {
     json: true,
     headers: requestHeaders,
   })
+  console.log(chalk.green(`tags count => ${tags.length}`))
   saveData('tagList', `tagList.json`, tags)
 })()
