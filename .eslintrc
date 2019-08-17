@@ -1,5 +1,9 @@
 {
+  "env": {
+    "jest": true
+  },
   "extends": [
+    "airbnb",
     "plugin:prettier/recommended",
     "prettier/standard"
   ],
@@ -8,6 +12,10 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-param-reassign": 0,
+    "global-require": 0,
+    "no-plusplus": 0,
+    "no-console": 0
   }
 }
