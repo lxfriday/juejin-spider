@@ -3,7 +3,6 @@
  * @author lxfriday
  */
 
-const path = require('path')
 const chalk = require('chalk')
 
 const travelArticleData = require('./utils/travelArticleData')
@@ -15,8 +14,8 @@ let fileIndex = 0
 const idSet = new Set()
 
 travelArticleData(articleInfo => {
-  const user = articleInfo.user
-  const objectId = user.objectId
+  const { user } = articleInfo
+  const { objectId } = user
   if (!idSet.has(objectId)) {
     idSet.add(objectId)
     count++

@@ -6,13 +6,12 @@ const request = require('request-promise')
 const async = require('async')
 const { makeUrl, tagList } = require('./assets/tagList')
 const saveData = require('./utils/saveDataTofile')
+
 const pageSize = 100
-let currentPage = 0
 let articleCount = 0
 let rank = tagList.length + 1
 async function spider({ id, title, entryCount, subscribersCount }, cb) {
   const urls = []
-  let count = 0
   rank--
   for (let i = 0; i <= Math.ceil(entryCount / pageSize); i++) {
     urls.push(makeUrl(id, i, pageSize))
@@ -22,7 +21,6 @@ async function spider({ id, title, entryCount, subscribersCount }, cb) {
     urls,
     3,
     async function(url) {
-      count++
       console.log(url)
 
       const response = await request(url, {
@@ -41,7 +39,7 @@ async function spider({ id, title, entryCount, subscribersCount }, cb) {
       }
 
       articleCount += res.length
-      saveData('articleData', fileName + '.json', res)
+      saveData('articleData', `${fileName}.json`, res)
 
       console.log(
         `排名： ${rank}, id： ${id}, 标题： ${title}, 文章数： ${entryCount}, 关注数： ${subscribersCount}`

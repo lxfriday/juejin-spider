@@ -1,19 +1,11 @@
 # juejin-spider
 
-掘金蜘蛛和数据分析
+掘金蜘蛛和数据分析，主要关注了下面几个排行和统计
 
-## `src/assets/articleData`
-所有文章元数据
+- 掘金站内标签总数
+- 掘金站内标签下文章去重后的总数
+- 掘金用户排名（前1w）
+- 文章评论量排行
+- 点赞量排行
+- 浏览量排行
 
-![](./imgs/articleData.png)
-
-## `src/assets/composedData`
-组合后的文章原始数据分片文件
-
-![](./imgs/composedData.png)
-
-## `src/assets/userData`
-所有用户信息的数据
-
-![](./imgs/userData.png)
-![](./imgs/userData2.png)
