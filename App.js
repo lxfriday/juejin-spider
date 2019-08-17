@@ -23,6 +23,11 @@ switch (task) {
     require('./src/calcViewRank')
     break
   }
+  case 'comment': {
+    require('./src/calcCommentRank')
+    break
+  }
+
   default:
     break
 }
