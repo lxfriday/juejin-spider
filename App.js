@@ -16,6 +16,6 @@ switch (task) {
     break
   }
 
-  default: {
-  }
+  default:
+    break
 }
