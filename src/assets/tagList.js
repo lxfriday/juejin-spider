@@ -28,7 +28,7 @@ const tagArticleListUrl = (tagId, page, pageSize = 100, sort = 'hotIndex') => {
   )}`
 }
 
-//　获取 tagList
+// 获取 tagList
 // GET https://gold-tag-ms.juejin.im/v1/tags/type/hot/page/1/pageSize/10000
 const tagList = [
   {

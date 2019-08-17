@@ -1,6 +1,10 @@
 const task = process.env.TASK
 
 switch (task) {
+  case 'tagList': {
+    require('./src/getTagList')
+    break
+  }
   // 获取所有标签下所有的文章的原始数据
   case 'allTagData': {
     require('./src/getAllArticleData')
