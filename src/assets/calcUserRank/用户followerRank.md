@@ -1,5 +1,6 @@
 # 用户follower排行 
 
+🎉 等级，👦 关注数，🏠公司 
 - (1)[🎉 4][👦 67575] [🏠 掘金] [阴明](https://juejin.im/user/551d677ee4b0cd5b623f49cb) 
 - (2)[🎉 5][👦 46885] [🏠 稀土] [稀土君](https://juejin.im/user/551d6923e4b0cd5b623f54da) 
 - (3)[🎉 5][👦 45276] [🏠 Alibaba] [HollisChuang](https://juejin.im/user/56d79d3f128fe100513b924a) 

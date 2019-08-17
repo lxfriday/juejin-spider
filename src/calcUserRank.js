@@ -38,7 +38,7 @@ saveDataTofile('calcUserRank', `用户followerRank.json`, target)
 // save as md
 function generateMd() {
   const title = '# 用户follower排行 \r\n\r\n'
-  let content = ''
+  let content = '🎉 等级，👦 关注数，🏠公司 \r\n'
   target.forEach(({ user }, i) => {
     content += `- (${i + 1})[🎉 ${user.level}][👦 ${user.followersCount}] [🏠 ${
       user.company
