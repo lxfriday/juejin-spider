@@ -13,7 +13,7 @@ function compareVal(a) {
   return a.user.followersCount || 0
 }
 
-const target = Array(2000).fill({ user: { followersCount: 0 } })
+const target = Array(10000).fill({ user: { followersCount: 0 } })
 
 createHeap(target, compareVal)
 
