@@ -1,10 +1,9 @@
 /**
  * 组合所有的文章元数据到一个文件中
- * 把　600+ 文件的元数据全部组合到一个文件中，使用 `obj.objectId` 取 key
+ * 把 600+ 文件的元数据全部组合到一个文件中，使用 `obj.objectId` 取 key
  * @author lxfriday
  */
 
-const path = require('path')
 const chalk = require('chalk')
 
 const travelArticleData = require('./utils/travelArticleData')
@@ -16,7 +15,7 @@ let fileIndex = 0
 const idSet = new Set()
 
 travelArticleData(articleInfo => {
-  const objectId = articleInfo.objectId
+  const { objectId } = articleInfo
   if (!idSet.has(objectId)) {
     idSet.add(objectId)
     count++
