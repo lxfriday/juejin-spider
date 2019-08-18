@@ -234,8 +234,8 @@ npm run comment
 ```
 
 脚本执行完成会产生两个文件
-- `src/assets/calcViewRank/calcCommentRank.json` 是排行后的元信息
-- `src/assets/calcViewRank/calcCommentRank.md` 按排名编排的 md 文档
+- `src/assets/calcCommentRank/calcCommentRank.json` 是排行后的元信息
+- `src/assets/calcCommentRank/calcCommentRank.md` 按排名编排的 md 文档
 
 ## 技术解析
 - `async` 并发控制
@@ -300,148 +300,79 @@ function findMaxPrev(dataUnit, target, compareVal = v => v) {
 👀 浏览量，📌 标签 
 
 - (1)[👀 817784][📌 Android] [蜻蜓FM 涉嫌诈骗投资人和广告主源代码剖析](https://juejin.im/entry/5640a72a00b0023ca8f567a7/) 
-
 - (2)[👀 471926][📌 Vue.js] [手摸手，带你用vue撸后台 系列一（基础篇）](https://juejin.im/post/59097cd7a22b9d0065fb61d2) 
-
 - (3)[👀 336824][📌 Vue.js] [ 手摸手，带你用vue撸后台 系列二(登录权限篇)](https://juejin.im/post/591aa14f570c35006961acac) 
-
 - (4)[👀 261110][📌 面试] [中高级前端大厂面试秘籍，为你保驾护航金三银四，直通大厂(上)](https://juejin.im/post/5c64d15d6fb9a049d37f9c20) 
-
 - (5)[👀 173030][📌 程序员] [前端 100 问：能搞懂 80% 的请把简历给我](https://juejin.im/post/5d23e750f265da1b855c7bbe) 
-
 - (6)[👀 147633][📌 Go] [Gos: GO MODULE解决方案 💪](https://juejin.im/post/5ce3f6ede51d455cd73b9fef) 
-
 - (7)[👀 143114][📌 JavaScript] [首个微信小程序开发教程！](https://juejin.im/entry/57e34d6bd2030900691e9ad7) 
-
 - (8)[👀 140469][📌 Vue.js] [ 手摸手，带你用vue撸后台 系列三(实战篇)](https://juejin.im/post/593121aa0ce4630057f70d35) 
-
 - (9)[👀 139499][📌 Vue.js] [2018前端面试总结，看完弄懂，工资少说加3K | 掘金技术征文](https://juejin.im/post/5b94d8965188255c5a0cdc02) 
-
 - (10)[👀 137958][📌 Vue.js] [手摸手，带你用vue撸后台 系列四(vueAdmin 一个极简的后台基础模板)](https://juejin.im/post/595b4d776fb9a06bbe7dba56) 
-
 - (11)[👀 120472][📌 JavaScript] [一个合格的中级前端工程师必须要掌握的 28 个 JavaScript 技巧](https://juejin.im/post/5cef46226fb9a07eaf2b7516) 
-
 - (12)[👀 116779][📌 程序员] [疑因内部宫斗被离职，中兴70后程序员从公司坠楼 ​​​​](https://juejin.im/post/5a32942ef265da43104868fe) 
-
 - (13)[👀 105344][📌 JavaScript] [这一次，彻底弄懂 JavaScript 执行机制](https://juejin.im/post/59e85eebf265da430d571f89) 
-
 - (14)[👀 100848][📌 GitHub] [2018 Java 后端工程师的书单推荐](https://juejin.im/post/59c2f3e16fb9a00a600f6a5c) 
-
 - (15)[👀 98813][📌 JavaScript] [一名【合格】前端工程师的自检清单](https://juejin.im/post/5cc1da82f265da036023b628) 
-
 - (16)[👀 95634][📌 JavaScript] [知道这 20 个正则表达式，能让你少写 1,000 行代码](http://www.jianshu.com/p/e7bb97218946) 
-
 - (17)[👀 89452][📌 前端] [ES6、ES7、ES8、ES9、ES10新特性一览](https://juejin.im/post/5ca2e1935188254416288eb2) 
-
 - (18)[👀 88587][📌 Android] [RxJava2 只看这一篇文章就够了](https://juejin.im/post/5b17560e6fb9a01e2862246f) 
-
 - (19)[👀 86096][📌 Vue.js] [手摸手，带你优雅的使用 icon](https://juejin.im/post/59bb864b5188257e7a427c09) 
-
 - (20)[👀 84639][📌 开源] [中国首位00后CEO公然抄袭、复制我的开源作品](https://juejin.im/post/59ad758a518825243d1f28cb) 
 
 ### 点赞量排行
 👍 点赞数，📌 标签 
 
 - (1)[👍 5488][📌 程序员] [前端 100 问：能搞懂 80% 的请把简历给我](https://juejin.im/post/5d23e750f265da1b855c7bbe) 
-
 - (2)[👍 4431][📌 Vue.js] [2018前端面试总结，看完弄懂，工资少说加3K | 掘金技术征文](https://juejin.im/post/5b94d8965188255c5a0cdc02) 
-
 - (3)[👍 4368][📌 JavaScript] [这一次，彻底弄懂 JavaScript 执行机制](https://juejin.im/post/59e85eebf265da430d571f89) 
-
 - (4)[👍 4216][📌 面试] [一个合格(优秀)的前端都应该阅读这些文章](https://juejin.im/post/5d387f696fb9a07eeb13ea60) 
-
 - (5)[👍 4183][📌 面试] [中高级前端大厂面试秘籍，为你保驾护航金三银四，直通大厂(上)](https://juejin.im/post/5c64d15d6fb9a049d37f9c20) 
-
 - (6)[👍 3890][📌 JavaScript] [一名【合格】前端工程师的自检清单](https://juejin.im/post/5cc1da82f265da036023b628) 
-
 - (7)[👍 3807][📌 Vue.js] [近两万字小程序攻略发布了](https://juejin.im/post/5b8fd1416fb9a05cf3710690) 
-
 - (8)[👍 3701][📌 JavaScript] [一个合格的中级前端工程师必须要掌握的 28 个 JavaScript 技巧](https://juejin.im/post/5cef46226fb9a07eaf2b7516) 
-
 - (9)[👍 3664][📌 React.js] [技术胖155集前端视频教程-全部免费观看](https://juejin.im/post/5a5bc8c36fb9a01ca26774eb) 
-
 - (10)[👍 3551][📌 Android] [Kotlin 资源大全 - 学 Kotlin 看这一篇教程就够了](https://juejin.im/post/591dd9f544d904006c9fbb96) 
-
 - (11)[👍 3342][📌 HTML] [前端常用插件、工具类库汇总，不要重复造轮子啦！！！](https://juejin.im/post/5ba7d5dd5188255c6140cc9d) 
-
 - (12)[👍 3338][📌 Vue.js] [新年献礼 技术胖262集前端免费视频 让您走的更容易些](https://juejin.im/post/5c11bf145188252704368b98) 
-
 - (13)[👍 3205][📌 JavaScript] [知道这 20 个正则表达式，能让你少写 1,000 行代码](http://www.jianshu.com/p/e7bb97218946) 
-
 - (14)[👍 3202][📌 前端] [总结了17年初到18年初百场前端面试的面试经验(含答案)](https://juejin.im/post/5b44a485e51d4519945fb6b7) 
-
 - (15)[👍 2958][📌 前端框架] [大型项目前端架构浅谈（8000字原创）](https://juejin.im/post/5cea1f705188250640005472) 
-
 - (16)[👍 2932][📌 React.js] [2018春招前端面试: 闯关记(精排精校) | 掘金技术征文](https://juejin.im/post/5a998991f265da237f1dbdf9) 
-
 - (17)[👍 2902][📌 Vue.js] [手摸手，带你用vue撸后台 系列一（基础篇）](https://juejin.im/post/59097cd7a22b9d0065fb61d2) 
-
 - (18)[👍 2879][📌 JavaScript] [个人分享--web前端学习资源分享](https://juejin.im/post/5a0c1956f265da430a501f51) 
-
 - (19)[👍 2871][📌 CSS] [你未必知道的49个CSS知识点](https://juejin.im/post/5d3eca78e51d4561cb5dde12) 
-
-- (20)[👍 2846][📌 JavaScript] [JavaScript深入系列15篇正式完结！](https://juejin.im/post/59278e312f301e006c2e1510) 
-
+- (20)[👍 2846][📌 JavaScript] [JavaScript深入系列15篇正式完结！](https://juejin.im/post/59278e312f301e006c2e1510)
 - (21)[👍 2743][📌 React.js] [2018上半年掘金微信群日报优质文章合集：前端篇](https://juejin.im/post/5b3adfe2e51d4555b17e85df) 
-
 - (22)[👍 2643][📌 后端] [后端架构师技术图谱](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#数据结构) 
-
 - (23)[👍 2538][📌 Vue.js] [Vue 项目里戳中你痛点的问题及解决办法（更新）](https://juejin.im/post/5b174de8f265da6e410e0b4e) 
-
 - (24)[👍 2520][📌 JavaScript] [webpack详解](https://juejin.im/post/5aa3d2056fb9a028c36868aa) 
-
 - (25)[👍 2481][📌 Android] [花了 4 个月整理了 50 篇 Android 干货文章](https://juejin.im/post/5940e0f6128fe1006a0d6cd9) 
-
 - (26)[👍 2468][📌 Vue.js] [vue中Axios的封装和API接口的管理](https://juejin.im/post/5b55c118f265da0f6f1aa354) 
-
 - (27)[👍 2439][📌 CSS] [干货!各种常见布局实现+知名网站实例分析](https://juejin.im/post/5aa252ac518825558001d5de) 
-
 - (28)[👍 2427][📌 JavaScript] [JavaScript专题系列20篇正式完结！](https://juejin.im/post/59eff1fb6fb9a044ff30a942) 
-
 - (29)[👍 2371][📌 React.js] [年终回顾，为你汇总一份「前端技术清单」](https://juejin.im/post/5bdfb387e51d452c8e0aa902) 
-
 - (30)[👍 2340][📌 CSS] [关于移动端适配，你必须要知道的](https://juejin.im/post/5cddf289f265da038f77696c) 
-
 - (31)[👍 2301][📌 HTML] [前端开发者指南（2017）](https://juejin.im/post/592faca42f301e006bc791e0) 
-
 - (32)[👍 2279][📌 前端] [总有你要的编程书单（GitHub）](http://blog.didiaoyuan.com/2017/04/18/%E6%80%BB%E6%9C%89%E4%BD%A0%E8%A6%81%E7%9A%84%E7%BC%96%E7%A8%8B%E4%B9%A6%E5%8D%95%EF%BC%88GitHub-%EF%BC%89) 
-
 - (33)[👍 2247][📌 程序员] [一个前端的2018总结，2019展望 | 掘金年度征文](https://juejin.im/post/5c3c031ce51d45518c67d45e) 
-
 - (34)[👍 2243][📌 React.js] [前端面试考点多？看这些文章就够了（2019年6月更新版）](https://juejin.im/post/5aae076d6fb9a028cc6100a9) 
-
 - (35)[👍 2239][📌 React.js] [四月前端知识集锦（每月不可错过的文章集锦）](https://juejin.im/post/5ae95f17f265da0b93481dec) 
-
 - (36)[👍 2219][📌 JavaScript] [前端进阶必备，github 优质资源整理分享！](https://juejin.im/post/5d3edad9f265da03a652f133) 
-
 - (37)[👍 2211][📌 HTML] [前端必会的 Nginx入门视频教程(共11集)](https://juejin.im/post/5bd7a6046fb9a05d2c43f8c7) 
-
 - (38)[👍 2207][📌 Android] [Android 面试知识库](https://github.com/GeniusVJR/LearningNotes) 
-
 - (39)[👍 2191][📌 JavaScript] [「中高级前端面试」JavaScript手写代码无敌秘籍](https://juejin.im/post/5c9c3989e51d454e3a3902b6) 
-
 - (40)[👍 2189][📌 JavaScript] [JS正则表达式完整教程（略长）](https://juejin.im/post/5965943ff265da6c30653879) 
-
 - (41)[👍 2178][📌 前端] [ES6、ES7、ES8、ES9、ES10新特性一览](https://juejin.im/post/5ca2e1935188254416288eb2) 
-
 - (42)[👍 2177][📌 React.js] [2万5千字大厂面经 | 掘金技术征文](https://juejin.im/post/5ba34e54e51d450e5162789b) 
-
 - (43)[👍 2155][📌 Vue.js] [Vue 2.x脱坑记 - 查漏补缺(汇总下群里高频询问的xxx及给出不靠谱的解决方案)](https://juejin.im/post/59fa9257f265da43062a1b0e) 
-
 - (44)[👍 2141][📌 CSS] [webpack4-用之初体验，一起敲它十一遍](https://juejin.im/post/5adea0106fb9a07a9d6ff6de) 
-
 - (45)[👍 2140][📌 Angular.js] [前端知识点大百科全书](https://github.com/Wscats/Good-text-Share) 
-
 - (46)[👍 2132][📌 面试] [记录面试中一些回答不够好的题（Vue 居多） | 掘金技术征文](https://juejin.im/post/5a9b8417518825558251ce15) 
-
 - (47)[👍 2064][📌 JavaScript] [JavaScript 复杂判断的更优雅写法](https://juejin.im/post/5bdfef86e51d453bf8051bf8) 
-
 - (48)[👍 2060][📌 面试] [1月前端面试记](https://juejin.im/post/587dab348d6d810058d87a0a) 
-
 - (49)[👍 2019][📌 CSS] [一劳永逸的搞定 flex 布局](https://juejin.im/post/58e3a5a0a0bb9f0069fc16bb) 
-
 - (50)[👍 2013][📌 JavaScript] [首个微信小程序开发教程！](https://juejin.im/entry/57e34d6bd2030900691e9ad7) 
-
 
 `'掘金' ===  '前端社区'` ????
 
@@ -451,43 +382,24 @@ function findMaxPrev(dataUnit, target, compareVal = v => v) {
 🐶 评论数，📌 标签 
 
 - (1)[🐶 756][📌 程序员] [一个前端的2018总结，2019展望 | 掘金年度征文](https://juejin.im/post/5c3c031ce51d45518c67d45e) 
-
 - (2)[🐶 607][📌 Vue.js] [新年献礼 技术胖262集前端免费视频 让您走的更容易些](https://juejin.im/post/5c11bf145188252704368b98) 
-
 - (3)[🐶 570][📌 稀土] [不如我们从头来过 | 掘金](https://juejin.im/post/5bedaad5e51d45728f1074d8) 
-
 - (4)[🐶 468][📌 JavaScript] [一名【合格】前端工程师的自检清单](https://juejin.im/post/5cc1da82f265da036023b628) 
-
 - (5)[🐶 456][📌 沸点] [AMA：我是安卓开发者扔物线（朱凯），你有问题问我吗？]() 
-
 - (6)[🐶 452][📌 沸点] [晒晒你的电脑桌面 | 程序员的桌面是什么样的？]() 
-
 - (7)[🐶 445][📌 JavaScript] [这一次，彻底弄懂 JavaScript 执行机制](https://juejin.im/post/59e85eebf265da430d571f89) 
-
 - (8)[🐶 438][📌 TypeScript] [抛弃 JS，使用 TypeScript](https://juejin.im/post/5d19b0305188254e2e4e78e8) 
-
 - (9)[🐶 418][📌 沸点] [沸点：晒晒你们公司发的中秋福利]() 
-
 - (10)[🐶 404][📌 沸点] [沸点：说说你目前在学习什么？]() 
-
 - (11)[🐶 403][📌 沸点] [老板问需求多久能开发完，你怎么回答？]() 
-
 - (12)[🐶 398][📌 开源] [中国首位00后CEO公然抄袭、复制我的开源作品](https://juejin.im/post/59ad758a518825243d1f28cb) 
-
 - (13)[🐶 396][📌 面试] [中高级前端大厂面试秘籍，为你保驾护航金三银四，直通大厂(上)](https://juejin.im/post/5c64d15d6fb9a049d37f9c20) 
-
 - (14)[🐶 391][📌 程序员] [沸点：2017 年已经过去一半了，用一句话总结一下上半年]() 
-
 - (15)[🐶 388][📌 程序员] [沸点第十六期：你写代码的时候都在听什么歌？](https://juejin.im/entry/5779248c165abd0054b63482/detail) 
-
 - (16)[🐶 387][📌 Google] [你最喜欢的 Google 开发技术是什么？评论送 Google 限量音箱，电脑包](https://juejin.im/post/5a02bbd551882554f6663d41) 
-
 - (17)[🐶 359][📌 前端] [关于IT培训机构的个人看法](https://juejin.im/post/59e2574f51882578e310fcb1) 
-
 - (18)[🐶 357][📌 创业] [沸点第三十六期：你怎么看待 996 工作制？回答沸点送章鱼猫和掘金T恤](https://juejin.im/entry/57d59080128fe100552ac6be/detail) 
-
 - (19)[🐶 354][📌 前端框架] [大型项目前端架构浅谈（8000字原创）](https://juejin.im/post/5cea1f705188250640005472) 
-
 - (20)[🐶 344][📌 GitHub] [培训机构让Github的含金量降低了？](https://juejin.im/post/5b63e1bd6fb9a04fb016f431) 
 
 分析的内容就是这些了，我还统计了掘金站内的总的文章数和在标签下发布文章的用户总数
