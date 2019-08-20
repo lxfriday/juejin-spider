@@ -23,6 +23,10 @@ switch (task) {
     require('./src/calcDianzanRank')
     break
   }
+  case 'userdianzan': {
+    require('./src/calcUserDianzanRank')
+    break
+  }
   case 'view': {
     require('./src/calcViewRank')
     break

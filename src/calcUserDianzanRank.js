@@ -3,29 +3,29 @@
  * @author lxfriday
  */
 const chalk = require('chalk')
+const request = require('request-promise')
 const { createHeap, findMaxPrev } = require('./utils/sortPrev')
 const travelArticleData = require('./utils/travelArticleData')
 const saveDataTofile = require('./utils/saveDataTofile')
 
 const idSet = new Set()
-const allArticleObj = {}
 
 function compareVal(a) {
   return a.user.totalCollectionsCount || 0
 }
 
-const target = Array(1000).fill({ collectionCount: 0 })
+const target = Array(5000).fill({ user: { totalCollectionsCount: 0 } })
 
 createHeap(target, compareVal)
 
 travelArticleData(articleInfo => {
-  const { objectId, user, collectionCount } = articleInfo
+  const { user } = articleInfo
+  const { objectId } = user
   if (!idSet.has(objectId)) {
     idSet.add(objectId)
-    allArticleObj[objectId] = objectId
     console.log(
       chalk.cyan(
-        `collectionCount => ${collectionCount}, user => ${user.username}, level => ${user.level}`
+        `totalCollectionsCount => ${user.totalCollectionsCount}, user => ${user.username}, level => ${user.level}`
       )
     )
 
@@ -33,21 +33,35 @@ travelArticleData(articleInfo => {
   }
 })
 
-target.sort((a, b) => b.collectionCount - a.collectionCount)
+target.sort(
+  (a, b) => b.user.totalCollectionsCount - a.user.totalCollectionsCount
+)
 
-saveDataTofile('calcDianzanRank', `点赞rank.json`, target)
+saveDataTofile('calcUserDianzanRank', `用户点赞rank.json`, target)
 
 // save as md
-function generateMd() {
-  const title = '# 点赞排行 \r\n\r\n'
-  let content = '👍 点赞数，📌 标签 \r\n'
-  target.forEach((v, i) => {
-    content += `- (${i + 1})[👍 ${v.collectionCount}][📌 ${v.tags[0].title}] [${
-      v.title
-    }](${v.originalUrl}) \r\n`
+async function generateMd() {
+  const { sysTime1 } = await request('http://quan.suning.com/getSysTime.do', {
+    json: true,
   })
 
-  saveDataTofile('calcDianzanRank', `点赞rank.md`, title + content, false)
+  const timeStr = sysTime1.substr(0, 8)
+  const title = `# 用户点赞排行(${timeStr})\n\n`
+  let content = '🎉 等级，👍 点赞数，🏠公司\n'
+  target.forEach(({ user }, i) => {
+    content += `- (${i + 1})[🎉 ${user.level}][👍 ${
+      user.totalCollectionsCount
+    }] [🏠 ${user.company}] [${user.username}](https://juejin.im/user/${
+      user.objectId
+    })\n`
+  })
+
+  saveDataTofile(
+    'calcUserDianzanRank',
+    `用户点赞rank.md`,
+    title + content,
+    false
+  )
 }
 
 generateMd()
