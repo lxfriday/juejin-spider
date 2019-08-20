@@ -4,8 +4,8 @@
   },
   "extends": [
     "airbnb",
-    "plugin:prettier/recommended",
-    "prettier/standard"
+    "prettier",
+    "prettier/react"
   ],
   "parser": "babel-eslint",
   "plugins": [
