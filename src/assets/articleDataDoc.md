@@ -57,7 +57,7 @@
     "viewedEntriesCount": 1347, // 查看的文章数
     "jobTitle": "前端", // 工作：前端
     "subscribedTagsCount": 166, // 关注的标签数
-    "totalCollectionsCount": 120, // 总收藏数
+    "totalCollectionsCount": 120, // 总点赞数
     "username": "云影sky", // 用户名
     "avatarLarge": "https://user-gold-cdn.xitu.io/2019/7/14/16bf1155693d96c2?w=570&h=488&f=png&s=312610",
     "objectId": "57a0c28979bc440054958498" // 用户 id
