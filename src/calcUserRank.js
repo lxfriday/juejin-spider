@@ -3,6 +3,7 @@
  * @author lxfriday
  */
 const chalk = require('chalk')
+const request = require('request-promise')
 const { createHeap, findMaxPrev } = require('./utils/sortPrev')
 const travelArticleData = require('./utils/travelArticleData')
 const saveDataTofile = require('./utils/saveDataTofile')
@@ -36,13 +37,18 @@ target.sort((a, b) => b.user.followersCount - a.user.followersCount)
 saveDataTofile('calcUserRank', `用户followerRank.json`, target)
 
 // save as md
-function generateMd() {
-  const title = '# 用户follower排行 \r\n\r\n'
-  let content = '🎉 等级，👦 关注数，🏠公司 \r\n'
+async function generateMd() {
+  const { sysTime1 } = await request('http://quan.suning.com/getSysTime.do', {
+    json: true,
+  })
+
+  const timeStr = sysTime1.substr(0, 8)
+  const title = `# 用户follower排行(${timeStr})\n\n`
+  let content = '🎉 等级，👦 关注数，🏠公司\n'
   target.forEach(({ user }, i) => {
     content += `- (${i + 1})[🎉 ${user.level}][👦 ${user.followersCount}] [🏠 ${
       user.company
-    }] [${user.username}](https://juejin.im/user/${user.objectId}) \r\n`
+    }] [${user.username}](https://juejin.im/user/${user.objectId})\n`
   })
 
   saveDataTofile('calcUserRank', `用户followerRank.md`, title + content, false)

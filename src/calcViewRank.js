@@ -3,6 +3,7 @@
  * @author lxfriday
  */
 const chalk = require('chalk')
+const request = require('request-promise')
 const { createHeap, findMaxPrev } = require('./utils/sortPrev')
 const travelArticleData = require('./utils/travelArticleData')
 const saveDataTofile = require('./utils/saveDataTofile')
@@ -38,13 +39,18 @@ target.sort((a, b) => b.viewsCount - a.viewsCount)
 saveDataTofile('calcViewRank', `浏览量rank.json`, target)
 
 // save as md
-function generateMd() {
-  const title = '# 浏览量排行 \r\n\r\n'
-  let content = '👀 浏览量，📌 标签 \r\n'
+async function generateMd() {
+  const { sysTime1 } = await request('http://quan.suning.com/getSysTime.do', {
+    json: true,
+  })
+
+  const timeStr = sysTime1.substr(0, 8)
+  const title = `# 浏览量排行(${timeStr})\n\n`
+  let content = '👀 浏览量，📌 标签\n'
   target.forEach((v, i) => {
     content += `- (${i + 1})[👀 ${v.viewsCount}][📌 ${v.tags[0].title}] [${
       v.title
-    }](${v.originalUrl}) \r\n`
+    }](${v.originalUrl})\n`
   })
 
   saveDataTofile('calcViewRank', `浏览量rank.md`, title + content, false)
