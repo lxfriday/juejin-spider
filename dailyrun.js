@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * 自动执行器
  * 1、自动抓数据，运算排名
@@ -18,7 +19,7 @@ const shell = require('shelljs')
   const timeStr = sysTime1.substr(0, 8)
 
   // wait
-  // shell.exec('npm run all')
+  shell.exec('npm run all')
 
   // git
   shell.exec('git add *')
