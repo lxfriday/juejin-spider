@@ -193,6 +193,15 @@ npm run allTagData
 }
 ```
 
+### 在标签下发表过专栏的用户计算
+在标签下发表过专栏的用户计算
+```bash
+npm run userData
+```
+
+脚本执行完成会产生两个文件
+- `src/assets/userData/${number}-userData.json` 多个 json 文件是所有用户的开放信息，用来计算日变化量
+
 ### 关注量排行
 获取站内浏览量
 ```bash
