@@ -7,6 +7,10 @@ const chalk = require('chalk')
 
 const travelArticleData = require('./utils/travelArticleData')
 const saveDataTofile = require('./utils/saveDataTofile')
+const removeUserData = require('./utils/removeUserData')
+
+// 先删除文件，再重新生成
+removeUserData()
 
 let allUserObj = {}
 let count = 0
