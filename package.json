@@ -4,7 +4,7 @@
   "description": "抓取掘金文章和作者信息，分析排行",
   "main": "App.js",
   "scripts": {
-    "all": "npm run tagList && npm run allTagData && npm run dianzan && npm run userdianzan && npm run view && npm run comment && npm run follower",
+    "all": "npm run tagList && npm run allTagData && npm run userData && npm run dianzan && npm run userdianzan && npm run view && npm run comment && npm run follower",
     "start": "npm run tagList",
     "tagList": "TASK=tagList node App.js",
     "allTagData": "TASK=allTagData node App.js",

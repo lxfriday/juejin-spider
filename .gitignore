@@ -4,7 +4,6 @@ lib/
 
 src/assets/articleData/*.json
 src/assets/composedData/*.json
-src/assets/userData/*.json
 src/assets/calcDianzanRank/*.json
 src/assets/calcViewRank/*.json
 src/assets/calcUserDianzanRank/*.json
