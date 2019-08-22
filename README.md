@@ -199,7 +199,7 @@ npm run allTagData
 npm run userData
 ```
 
-脚本执行完成会产生两个文件
+脚本执行完成会产生多个 `${number}-userData.json` 文件
 - `src/assets/userData/${number}-userData.json` 多个 json 文件是所有用户的开放信息，用来计算日变化量
 
 ### 关注量排行
