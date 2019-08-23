@@ -7,13 +7,13 @@
 
 掘金 spider 和数据分析，主要关注了下面几个排行和统计，排行点击直接查看
 
-- [掘金用户排名（前5000，按关注者）](https://github.com/lxfriday/juejin-spider/blob/master/src/assets/calcUserRank/%E7%94%A8%E6%88%B7followerRank.md)
-- [掘金用户排名（前5000，按用户点赞总量）](https://github.com/lxfriday/juejin-spider/blob/master/src/assets/calcUserDianzanRank/%E7%94%A8%E6%88%B7%E7%82%B9%E8%B5%9Erank.md)
-- [掘金站内标签总数](https://github.com/lxfriday/juejin-spider/blob/master/src/assets/tagList/tagList.json)
-- [掘金站内标签下文章](https://github.com/lxfriday/juejin-spider/tree/master/src/assets/articleData)
-- [文章评论量排行](https://github.com/lxfriday/juejin-spider/blob/master/src/assets/calcCommentRank/%E8%AF%84%E8%AE%BA%E9%87%8Frank.md)
-- [点赞量排行](https://github.com/lxfriday/juejin-spider/blob/master/src/assets/calcDianzanRank/%E7%82%B9%E8%B5%9Erank.md)
-- [浏览量排行](https://github.com/lxfriday/juejin-spider/blob/master/src/assets/calcViewRank/%E6%B5%8F%E8%A7%88%E9%87%8Frank.md)
+- [掘金用户排名（前5000，按关注者）](./src/assets/calcUserRank/%E7%94%A8%E6%88%B7followerRank.md)
+- [掘金用户排名（前5000，按用户点赞总量）](./src/assets/calcUserDianzanRank/%E7%94%A8%E6%88%B7%E7%82%B9%E8%B5%9Erank.md)
+- [掘金站内标签总数](./src/assets/tagList/tagList.json)
+- [掘金站内标签下文章](./src/assets/articleData)
+- [文章评论量排行](./src/assets/calcCommentRank/%E8%AF%84%E8%AE%BA%E9%87%8Frank.md)
+- [点赞量排行](./src/assets/calcDianzanRank/%E7%82%B9%E8%B5%9Erank.md)
+- [浏览量排行](./src/assets/calcViewRank/%E6%B5%8F%E8%A7%88%E9%87%8Frank.md)
 
 **先上掘金前50排名，关注一波？？？？** [前5000排名看这里](https://github.com/lxfriday/juejin-spider/blob/master/src/assets/calcUserRank/%E7%94%A8%E6%88%B7followerRank.md)
 
