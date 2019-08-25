@@ -5,5 +5,5 @@ export const dva = {
       console.error(e.message)
     },
   },
-  plugins: [require('dva-logger')()],
+  // plugins: [require('dva-logger')()],
 }
