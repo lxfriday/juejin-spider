@@ -10,7 +10,7 @@ const fs = require('fs')
 const travelArticleData = require('../utils/travelArticleData')
 const uidfile = require('../utils/uidfile')
 const saveDataTofile = require('../utils/saveDataTofile')
-const { sitedataDir } = require('../utils/path')
+const { websitedataDir } = require('../utils/path')
 
 const allUserObj = {}
 let userCount = 0
@@ -50,14 +50,14 @@ travelArticleData(articleInfo => {
   })
 
   const yearDate = sysTime1.substr(0, 8) // 20190825
-  const yearDateDirPath = path.resolve(sitedataDir, yearDate)
+  const yearDateDirPath = path.resolve(websitedataDir, yearDate)
 
   const yearDateDirExist = fs.existsSync(yearDateDirPath)
   if (!yearDateDirExist) {
     fs.mkdirSync(yearDateDirPath)
   }
   saveDataTofile(
-    `../sitedata/data/${yearDate}`,
+    `../../website/public/data/${yearDate}`,
     `userCount.txt`,
     userCount,
     false
@@ -69,7 +69,7 @@ travelArticleData(articleInfo => {
     1,
     (filename, cb) => {
       saveDataTofile(
-        `../sitedata/data/${yearDate}`,
+        `../../website/public/data/${yearDate}`,
         `${filename}`,
         allUserObj[filename]
       )
@@ -77,7 +77,7 @@ travelArticleData(articleInfo => {
     },
     err => {
       if (err) throw err
-      console.log('sitedata finished')
+      console.log('getData finished')
     }
   )
 })()

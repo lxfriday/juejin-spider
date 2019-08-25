@@ -247,6 +247,38 @@ npm run comment
 - `src/assets/calcCommentRank/calcCommentRank.json` 是排行后的元信息
 - `src/assets/calcCommentRank/calcCommentRank.md` 按排名编排的 md 文档
 
+
+### 自动分析 uidfile 算法处理后的数据分布状况
+自动分析 `uidfile` 算法处理后的数据分布状况
+```bash
+npm run uidfile
+```
+
+脚本执行完成会产生一个文件
+- `src/sitedata/uidfile/uidfile.md` 分布状况文档
+
+
+### 自动生成当日 website 网站图形数据
+自动生成当日 website 网站图形数据
+```bash
+npm run sitedata
+```
+
+脚本执行完成会产生50+个文件
+- `website/public/data/${yeardate}/${0-50}.json` 当日的统计数据，50个文件，经过 uidfile 算法处理形成的文件名
+- `website/public/data/${yeardate}/userCount.txt` 处理到的总用户数
+
+`${0-50}.json` 文件结构
+
+```js
+{
+  "5a66dff2f265da3e4f0a4f1b":[4966,4430,140],  // ...
+}
+// 关注者，总点赞量，总评论量
+// [user.objectId]: [followersCount, totalCollectionsCount, totalCommentsCount]
+```
+
+
 ## 技术解析
 - `async` 并发控制
 - `chalk` 多彩命令行
