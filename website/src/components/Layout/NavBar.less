@@ -1,0 +1,89 @@
+@import "../../themes/vars.less";
+
+.container {
+  height: 72px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+
+  .title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+    padding-top: 6px;
+    padding-left: 12px;
+    padding-right: 28px;
+    border-left: 3px solid @primary-color;
+    border-bottom: 3px solid @primary-color;
+    border-bottom-left-radius: 30px;
+  }
+  .rightWrapper {
+    display: flex;
+  }
+}
+
+
+.toolTipWrapper {
+  padding: 6px 6px 3px 6px;
+
+  .contentWrapper {
+    padding-bottom: 12px;
+    .avatarAndUsername {
+      display: flex;
+      align-items: center;
+      .username {
+        margin-left: 12px;
+      }
+    }
+  }
+  .blankWrapper {
+    display: flex;
+    height: 18px;
+    margin-bottom: 6px;
+
+    div {
+      flex: 1;
+      text-align: center;
+    }
+
+    div~div {
+      border-left: 1px solid #666666;
+    }
+  }
+
+  .bottomWrapper {
+    padding: 6px 0;
+    border-top: 1px solid #666666;
+    text-align: center;
+    cursor: pointer;
+    transition: @transition-ease-in;
+
+    &:hover {
+      background-color: rgba(255,255,255,.05);
+    }
+  }
+}
+
+.overLay {
+  width: 220px;
+  padding-right: 0;
+  background-color: #252a2f;
+
+  :global {
+    .ant-tooltip-arrow {
+      display: none;
+    }
+    .ant-tooltip-inner {
+      background-color: transparent;
+    }
+  }
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
