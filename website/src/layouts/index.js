@@ -41,7 +41,7 @@ class BaseLayout extends PureComponent {
         <Fragment>
           <Helmet>
             <title>{config.siteName}</title>
-            <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+            <link rel="shortcut icon" href="/juejin-spider/favicon.png" type="image/x-icon" />
           </Helmet>
           <Container>{children}</Container>
         </Fragment>

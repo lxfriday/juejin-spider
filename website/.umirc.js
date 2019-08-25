@@ -1,30 +1,29 @@
-import { resolve } from 'path';
+import { resolve } from 'path'
 // ref: https://umijs.org/config/
 export default {
+  base: '/juejin-spider',
+  publicPath: '/juejin-spider/',
   ignoreMomentLocale: true,
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
-    ['umi-plugin-react', {
-      antd: true,
-      dva: {
-        immer: true, // true => reduce 的 state 为 proxy
+    [
+      'umi-plugin-react',
+      {
+        antd: true,
+        dva: {
+          immer: true, // true => reduce 的 state 为 proxy
+        },
+        dynamicImport: true,
+        title: '掘金数据',
+        dll: {
+          include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch', 'antd/es'],
+        },
+        hardSource: false,
+        routes: {
+          exclude: [/components/, /models/],
+        },
       },
-      // dynamicImport: {
-      //   webpackChunkName: true,
-      //   loadingComponent: './components/Loader/Loader',
-      // },
-      title: '掘金数据',
-      dll: {
-        include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch', 'antd/es'],
-      },
-      hardSource: false,
-      routes: {
-        exclude: [
-          /components/,
-          /models/,
-        ],
-      },
-    }],
+    ],
   ],
   theme: './config/theme.config.js',
   alias: {

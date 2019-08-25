@@ -32,9 +32,7 @@ class Graph extends Component {
               type: 'cross',
             }}
           />
-          <Geom type="line" position="date*dianzan" size={2} color="#0099CC" shape="smooth">
-            <Label content="dianzan" formatter={val => `${val}`} />
-          </Geom>
+          <Geom type="line" position="date*dianzan" size={2} color="#0099CC" shape="smooth" />
           <Geom type="point" shape="circle" position="date*dianzan" color="#0099CC" size={5} />
         </Chart>
       </Card>

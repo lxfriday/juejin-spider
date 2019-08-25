@@ -32,9 +32,7 @@ class Graph extends Component {
               type: 'cross',
             }}
           />
-          <Geom type="line" position="date*follower" size={2} color="#0099CC" shape="smooth">
-            <Label content="follower" formatter={val => `${val}`} textStyle={{ textBaseline: 'middle' }} />
-          </Geom>
+          <Geom type="line" position="date*follower" size={2} color="#0099CC" shape="smooth" />
           <Geom type="point" shape="circle" position="date*follower" color="#0099CC" size={5} />
         </Chart>
       </Card>

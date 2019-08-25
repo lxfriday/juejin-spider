@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "抓取掘金文章和作者信息，分析排行",
   "main": "App.js",
+  "homepage": "https://lxfriday.github.io/juejin-spider",
   "scripts": {
     "all": "npm run tagList && npm run allTagData && npm run userData && npm run dianzan && npm run userdianzan && npm run view && npm run comment && npm run follower",
     "start": "npm run tagList",
@@ -17,6 +18,9 @@
     "follower": "TASK=follower node App.js",
     "uidfile": "TASK=uidfile node App.js",
     "sitedata": "TASK=sitedata node App.js",
+
+    "predeploy": "cd website && npm run build",
+    "deploy": "gh-pages -d ./website/dist",
     "lint": "eslint .",
     "test": "jest"
   },
@@ -54,6 +58,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "gh-pages": "^2.1.1",
     "husky": "^3.0.3",
     "jest": "^24.9.0",
     "lint-staged": "^9.2.1",
