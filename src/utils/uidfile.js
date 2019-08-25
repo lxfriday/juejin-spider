@@ -4,9 +4,9 @@
  * @author lxfriday
  */
 
-const userTimelineFileName = uid =>
+const uidfile = uid =>
   `${[...uid].reduce((sum, c) => sum + parseInt(c, 16), 0) % 50}.json`
 
-// userTimelineFileName('57a0c28979bc440054958498') === "52.json"
+// uidfile('57a0c28979bc440054958498') === "52.json"
 
-module.exports = userTimelineFileName
+module.exports = uidfile

@@ -1,13 +1,14 @@
 /**
- * 用户时间线数据统计
+ * 用户 objectId 经 uidfile 算法处理之后的分布状况
  * @author lxfriday
  */
 
 const travelArticleData = require('../../utils/travelArticleData')
-const uidmap = require('../../utils/uidmap')
+const uidfile = require('../../utils/uidfile')
 const saveDataTofile = require('../../utils/saveDataTofile')
 
 const allUserObj = {}
+let userCount = 0
 const idSet = new Set()
 
 travelArticleData(articleInfo => {
@@ -15,7 +16,8 @@ travelArticleData(articleInfo => {
   const { objectId } = user
   if (!idSet.has(objectId) && objectId) {
     idSet.add(objectId)
-    const filenamne = uidmap(objectId)
+    userCount++
+    const filenamne = uidfile(objectId)
     if (allUserObj[filenamne]) {
       allUserObj[filenamne] += 1
     } else {
@@ -28,11 +30,18 @@ const info = Object.keys(allUserObj)
   .map(filename => ({ f: filename, c: allUserObj[filename] }))
   .sort((a, b) => a.c - b.c)
 
-let content = '# uidmap\n\n'
+let content = `# uidfile\n\n 统计用户数：${userCount}\n\n`
 
 for (let i = 0; i < info.length; i++) {
-  console.log(`${info[i].f} => ${info[i].c}`)
-  content += `- ${info[i].f} => ${info[i].c}\n`
+  console.log(
+    `${info[i].f} => ${info[i].c} ${((info[i].c * 100) / userCount).toFixed(
+      1
+    )}%`
+  )
+  content += `- ${info[i].f} => ${info[i].c} **${(
+    (info[i].c * 100) /
+    userCount
+  ).toFixed(1)}%**\n`
 }
 
-saveDataTofile('../sitedata/uidmap', `uidmap.md`, content, false)
+saveDataTofile('../sitedata/uidfile', `uidfile.md`, content, false)

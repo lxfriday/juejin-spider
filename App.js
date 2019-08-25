@@ -40,6 +40,14 @@ switch (task) {
     break
   }
 
+  case 'uidfile': {
+    require('./src/sitedata/uidfile/uidfile')
+    break
+  }
+  case 'sitedata': {
+    require('./src/sitedata/getData')
+    break
+  }
   default:
     break
 }

@@ -152,7 +152,7 @@ npm run allTagData
         "uid": "20264467"
       }
     },
-    "collectedEntriesCount": 154, // 点赞数
+    "collectedEntriesCount": 154, // 用户给别人点的点赞数
     "company": "xxx", // 公司
     "followersCount": 35, // 被关注数
     "followeesCount": 70, // 关注数
