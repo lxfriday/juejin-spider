@@ -1,6 +1,7 @@
 {
   "extends": [
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "eslint-config-umi"
   ],
   "parser": "babel-eslint",
   "plugins": [

@@ -13,7 +13,7 @@ export default {
       //   webpackChunkName: true,
       //   loadingComponent: './components/Loader/Loader',
       // },
-      title: 'xxxx',
+      title: '掘金数据',
       dll: {
         include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch', 'antd/es'],
       },

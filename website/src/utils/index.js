@@ -127,3 +127,29 @@ export function timeTransform(timeStamp, format = 'YYYY/MM/DD HH:mm') {
 export function timeFromNow(timeStamp) {
   return moment(timeStamp * 1000).fromNow()
 }
+
+/**
+ * 用户数据量很大，需要依据id切分到不同的文件中，使用id查询的时候直接命中这个文件，再从这个文件获取值
+ * uidfile('57a0c28979bc440054958498') === "52.json"
+ * 用户 objectId 处理算法
+ */
+export const uidfile = uid => `${[...uid].reduce((sum, c) => sum + parseInt(c, 16), 0) % 50}.json`
+
+export function getLastSevenDay() {
+  const ret = []
+  const today = moment()
+  ret.push(today.format('YYYYMMDD'))
+  today.subtract(1, 'd')
+  ret.push(today.format('YYYYMMDD'))
+  today.subtract(1, 'd')
+  ret.push(today.format('YYYYMMDD'))
+  today.subtract(1, 'd')
+  ret.push(today.format('YYYYMMDD'))
+  today.subtract(1, 'd')
+  ret.push(today.format('YYYYMMDD'))
+  today.subtract(1, 'd')
+  ret.push(today.format('YYYYMMDD'))
+  today.subtract(1, 'd')
+  ret.push(today.format('YYYYMMDD'))
+  return ret // ["20190824", "20190823", "20190822", "20190821", "20190820", "20190819", "20190818"]
+}

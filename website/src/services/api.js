@@ -1,6 +1,5 @@
-import { GET, POST, PUT, DELETE, urlBase } from './base'
+import { GET, urlBase } from './base'
 
-// 获取测定站信息
-export async function getStationListService() {
-  return await GET(urlBase + '/admin/dashboard/stationinfo/')
+export async function getGraphData({ filename, yearDate }) {
+  return await GET(urlBase + `/${yearDate}/${filename}`)
 }

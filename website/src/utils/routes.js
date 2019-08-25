@@ -6,9 +6,9 @@ const routes = [
     hide: true, // 不显示 重定向到 /dashboard
   },
   {
-    id: '点赞量、关注者、评论量',
-    name: 'graphanalyse',
-    route: 'graphanalyse',
+    id: 'graphanalyse',
+    name: '增长分析',
+    route: '/graphanalyse',
   },
 ]
 
