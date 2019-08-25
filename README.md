@@ -265,10 +265,10 @@ npm run sitedata
 ```
 
 脚本执行完成会产生50+个文件
-- `website/public/data/${yeardate}/${0-50}.json` 当日的统计数据，50个文件，经过 uidfile 算法处理形成的文件名
+- `website/public/data/${yeardate}/${0-49}.json` 当日的统计数据，50个文件，经过 uidfile 算法处理形成的文件名
 - `website/public/data/${yeardate}/userCount.txt` 处理到的总用户数
 
-`${0-50}.json` 文件结构
+`${0-49}.json` 文件结构
 
 ```js
 {
