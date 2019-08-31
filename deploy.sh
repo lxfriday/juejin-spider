@@ -1,3 +1,4 @@
+npm run deploy
 cd ./website/dist
 git init
 git add *
