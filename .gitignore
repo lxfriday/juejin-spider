@@ -11,6 +11,8 @@ src/assets/calcUserDianzanRank/*.json
 # src/sitedata
 src/sitedata/prevdata
 
+website/dist/
+
 
 # umi
 .umi

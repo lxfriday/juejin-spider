@@ -5,7 +5,7 @@
   "main": "App.js",
   "homepage": "https://lxfriday.github.io/juejin-spider",
   "scripts": {
-    "all": "npm run tagList && npm run allTagData && npm run userData && npm run dianzan && npm run userdianzan && npm run view && npm run comment && npm run follower&& npm run sitedata && npm run deploy",
+    "all": "npm run tagList && npm run allTagData && npm run userData && npm run dianzan && npm run userdianzan && npm run view && npm run comment && npm run follower&& npm run sitedata",
     "start": "npm run tagList",
     "tagList": "TASK=tagList node App.js",
     "allTagData": "TASK=allTagData node App.js",
