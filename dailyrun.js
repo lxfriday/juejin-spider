@@ -21,15 +21,20 @@ const shell = require('shelljs')
   // wait
   shell.exec('npm run all')
 
-  // git
-  shell.exec('git add *')
-  shell.exec(`git commit -m 'chore: update ${timeStr}'`)
-  shell.exec('git push')
-  shell.exec(`git tag ${timeStr}`)
-  shell.exec('git push --tags')
+  shell.echo('---------------------')
+  shell.echo('waiting 2 seconds')
 
-  shell.echo('-------')
-  shell.echo('start deploy')
-  shell.exec('sh ./deploy.sh')
-  shell.echo('pushed to gitee')
+  setTimeout(() => {
+    // git
+    shell.exec('git add *')
+    shell.exec(`git commit -m 'chore: update ${timeStr}'`)
+    shell.exec('git push')
+    shell.exec(`git tag ${timeStr}`)
+    shell.exec('git push --tags')
+
+    shell.echo('-------')
+    shell.echo('start deploy')
+    shell.exec('sh ./deploy.sh')
+    shell.echo('pushed to gitee')
+  }, 2000)
 })()
