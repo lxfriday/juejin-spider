@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Card } from 'antd'
-import { Chart, Axis, Tooltip, Geom, Label } from 'bizcharts'
+import { Chart, Axis, Tooltip, Geom } from 'bizcharts'
 import styles from './FollowerGraph.less'
 const DataSet = require('@antv/data-set')
 

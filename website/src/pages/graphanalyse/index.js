@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'dva'
-import { Row, Col, Skeleton, Card, Input } from 'antd'
+import { Row, Col, Skeleton, Card, Input, Result, Icon } from 'antd'
 import store from 'store'
 
 import FollowerGraph from './components/FollowerGraph'
@@ -35,13 +35,13 @@ class GraphAnalyse extends Component {
   }
 
   render() {
-    const { followerData, dianzanData, commentData, lastSevenDay, loading } = this.props
+    const { followerData, dianzanData, commentData, daysArr, loading } = this.props
     const isLoading = loading.effects['graphanalyse/getData']
     const followerGraph = []
     const dianzanGraph = []
     const commentGraph = []
 
-    lastSevenDay.forEach((v, i) => {
+    daysArr.forEach((v, i) => {
       if (followerData[i]) {
         followerGraph.push({ follower: followerData[i], date: v })
       }
@@ -65,18 +65,28 @@ class GraphAnalyse extends Component {
         <Card>
           <Skeleton loading={isLoading} active>
             <Row gutter={8}>
-              <Col xs={24} xl={12}>
+              <Col xs={24}>
                 <FollowerGraph followerGraph={followerGraph} />
               </Col>
-              <Col xs={24} xl={12}>
+              <Col xs={24}>
                 <DianzanGraph dianzanGraph={dianzanGraph} />
               </Col>
-              <Col xs={24} xl={12}>
+              <Col xs={24}>
                 <CommentGraph commentGraph={commentGraph} />
               </Col>
             </Row>
           </Skeleton>
         </Card>
+        <Result
+          style={{ marginTop: 12 }}
+          icon={<Icon type="github" />}
+          title={<a href="https://github.com/lxfriday/juejin-spider">juejin-spider</a>}
+          extra={
+            <p>
+              Created by <a href="https://juejin.im/user/57a0c28979bc440054958498">云影sky</a>
+            </p>
+          }
+        />
       </Fragment>
     )
   }

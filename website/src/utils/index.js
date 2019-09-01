@@ -153,3 +153,16 @@ export function getLastSevenDay() {
   ret.push(today.format('YYYYMMDD'))
   return ret // ["20190824", "20190823", "20190822", "20190821", "20190820", "20190819", "20190818"]
 }
+
+// 获取最近日期的数组
+export function getLastDays(days = 15) {
+  const ret = []
+  const today = moment()
+  today.add(1, 'd')
+  for (let i = 0; i< 15; i++) {
+    today.subtract(1, 'd')
+    ret.push(today.format('YYYYMMDD'))
+  }
+
+  return ret
+}
