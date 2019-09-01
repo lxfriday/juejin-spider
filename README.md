@@ -4,7 +4,8 @@
 
 在输入框输入用户主页的 url 搜索。例如我的主页是 [https://juejin.im/user/57a0c28979bc440054958498](https://juejin.im/user/57a0c28979bc440054958498)
 
-![排名历史变化查看](./imgs/graqphanalyse.png)
+![排名历史变化查看](./imgs/juejin-data1.png)
+![排名历史变化查看](./imgs/juejin-data2.png)
 
 文章教你如何做掘金站内数据抓取，数据解析，最后形成排序后的排名。
 
