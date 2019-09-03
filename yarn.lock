@@ -4002,10 +4002,25 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
+openbrowser@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/openbrowser/download/openbrowser-1.0.2.tgz#3cb086c500f5860d4ec97c0d9dd789c2d02183af"
+  integrity sha1-PLCGxQD1hg1OyXwNndeJwtAhg68=
+  dependencies:
+    opn "4.0.2"
+
 opencollective-postinstall@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npm.taobao.org/opencollective-postinstall/download/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
   integrity sha1-Vlfxvt5ptuM6RZObBh61PTxsOok=
+
+opn@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npm.taobao.org/opn/download/opn-4.0.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fopn%2Fdownload%2Fopn-4.0.2.tgz#7abc22e644dff63b0a96d5ab7f2790c0f01abc95"
+  integrity sha1-erwi5kTf9jsKltWrfyeQwPAavJU=
+  dependencies:
+    object-assign "^4.0.1"
+    pinkie-promise "^2.0.0"
 
 optimist@^0.6.1:
   version "0.6.1"

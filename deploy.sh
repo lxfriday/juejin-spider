@@ -10,3 +10,7 @@ git push -u -f origin ge-pages
 echo "go to deploy"
 echo "https://gitee.com/lxfriday/juejin-spider/pages"
 
+echo "opening browser"
+
+./openbrowser.js
+
