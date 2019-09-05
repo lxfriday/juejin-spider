@@ -12,5 +12,4 @@ echo "https://gitee.com/lxfriday/juejin-spider/pages"
 
 echo "opening browser"
 
-./openbrowser.js
-
+../../openbrowser.js
