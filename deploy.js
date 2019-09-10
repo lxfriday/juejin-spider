@@ -23,7 +23,7 @@ const shell = require('shelljs')
 
   setTimeout(() => {
     // git
-    shell.exec('git add *')
+    shell.exec('git add .')
     shell.exec(`git commit -m 'build: update ${timeStr}'`)
     shell.exec('git push')
     shell.exec(`git tag ${timeStr}`)

@@ -19,9 +19,9 @@
     "uidfile": "cross-env TASK=uidfile node App.js",
     "sitedata": "cross-env TASK=sitedata node App.js",
     "predeploy": "cd website && npm run build",
-    "deploy": "gh-pages -d ./website/dist",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "cd website && npm i"
   },
   "husky": {
     "hooks": {
