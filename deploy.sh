@@ -1,6 +1,6 @@
 cd website
 npm run build
-cd ./website/dist
+cd ./dist
 git init
 git add .
 git remote add origin git@gitee.com:lxfriday/juejin-spider.git
