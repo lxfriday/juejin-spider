@@ -18,7 +18,7 @@
     "follower": "cross-env TASK=follower node App.js",
     "uidfile": "cross-env TASK=uidfile node App.js",
     "sitedata": "cross-env TASK=sitedata node App.js",
-    "predeploy": "cd website && npm run build",
+    "deploy": "node ./deploy.js",
     "lint": "eslint .",
     "test": "jest",
     "prepare": "cd website && npm i"

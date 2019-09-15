@@ -1,4 +1,5 @@
-npm run predeploy
+cd website
+npm run build
 cd ./website/dist
 git init
 git add .
