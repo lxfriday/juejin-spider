@@ -1,6 +1,6 @@
 # juejin-spider
 
-[排名历史变化查看](https://lxfriday.gitee.io/juejin-spider)
+[关注者、点赞数、评论数历史数据变化](https://lxfriday.gitee.io/juejin-spider)
 
 在输入框输入用户主页的 url 搜索。例如我的主页是 [https://juejin.im/user/57a0c28979bc440054958498](https://juejin.im/user/57a0c28979bc440054958498)
 
