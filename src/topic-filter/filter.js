@@ -4,6 +4,19 @@ const { createHeap, findMaxPrev } = require('../utils/sortPrev')
 const travelArticleData = require('../utils/travelArticleData')
 const saveDataTofile = require('../utils/saveDataTofile')
 
+function filterTitle(title, filterName) {
+  let shouldAdd = false
+  const targets = filterName.split('&').filter(_ => !!_.length)
+  const newTitle = title.toLowerCase().replace(/[\s]/g, '')
+
+  targets.forEach(v => {
+    if (newTitle.includes(v)) {
+      shouldAdd = true
+    }
+  })
+  return shouldAdd
+}
+
 module.exports = function filter(filterName, cb) {
   const calcStart = Date.now()
   console.log(`topic-filter ${filterName} start`)
@@ -21,13 +34,7 @@ module.exports = function filter(filterName, cb) {
 
   travelArticleData(articleInfo => {
     const { objectId, user, collectionCount, title } = articleInfo
-    if (
-      !idSet.has(objectId) &&
-      title
-        .toLowerCase()
-        .replace(/[\s]/g, '')
-        .includes(filterName)
-    ) {
+    if (!idSet.has(objectId) && filterTitle(title, filterName)) {
       idSet.add(objectId)
       allArticleObj[objectId] = objectId
       console.log(
