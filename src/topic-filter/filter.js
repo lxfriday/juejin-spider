@@ -6,14 +6,27 @@ const saveDataTofile = require('../utils/saveDataTofile')
 
 function filterTitle(title, filterName) {
   let shouldAdd = false
-  const targets = filterName.split('&').filter(_ => !!_.length)
+  let targets = []
+  let orMatch = false
   const newTitle = title.toLowerCase().replace(/[\s]/g, '')
 
-  targets.forEach(v => {
-    if (newTitle.includes(v)) {
-      shouldAdd = true
-    }
-  })
+  if (filterName.includes('&')) {
+    targets = filterName.split('&').filter(_ => !!_.length)
+  } else if (filterName.includes('|')) {
+    orMatch = true
+    targets = filterName.split('|').filter(_ => !!_.length)
+  }
+
+  if (orMatch) {
+    shouldAdd = targets.some(v => {
+      return newTitle.includes(v)
+    })
+  } else {
+    shouldAdd = targets.every(v => {
+      return newTitle.includes(v)
+    })
+  }
+
   return shouldAdd
 }
 
@@ -49,7 +62,11 @@ module.exports = function filter(filterName, cb) {
 
   target.sort((a, b) => b.collectionCount - a.collectionCount)
 
-  saveDataTofile('../topic-filter/assets', `filter-${filterName}.json`, target)
+  saveDataTofile(
+    '../topic-filter/assets',
+    `filter-${filterName}.json`.replace(/\|/g, 'or'),
+    target
+  )
 
   // save as md
   async function generateMd() {
@@ -73,7 +90,7 @@ module.exports = function filter(filterName, cb) {
 
     saveDataTofile(
       '../topic-filter/assets',
-      `filter-${filterName}.md`,
+      `filter-${filterName}.md`.replace(/\|/g, 'or'),
       title + content,
       false
     )
