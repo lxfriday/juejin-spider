@@ -21,7 +21,13 @@ module.exports = function filter(filterName, cb) {
 
   travelArticleData(articleInfo => {
     const { objectId, user, collectionCount, title } = articleInfo
-    if (!idSet.has(objectId) && title.toLowerCase().includes(filterName)) {
+    if (
+      !idSet.has(objectId) &&
+      title
+        .toLowerCase()
+        .replace(/[\s]/g, '')
+        .includes(filterName)
+    ) {
       idSet.add(objectId)
       allArticleObj[objectId] = objectId
       console.log(
