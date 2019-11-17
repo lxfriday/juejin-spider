@@ -18,6 +18,7 @@ setTimeout(() => {
     })
     const timeStr = sysTime1.substr(0, 8)
     // git
+    shell.exec(`npm run sitedata`)
     shell.exec(`git add . && git commit -m "build: ${timeStr}"`)
     shell.exec('git push')
     shell.exec(`git tag ${timeStr}`)
@@ -28,4 +29,4 @@ setTimeout(() => {
     shell.exec('sh ./deploy.sh')
     shell.echo('pushed to gitee')
   })()
-}, 0)
+}, 1800000)
