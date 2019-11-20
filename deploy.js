@@ -29,4 +29,4 @@ setTimeout(() => {
     shell.exec('sh ./deploy.sh')
     shell.echo('pushed to gitee')
   })()
-}, 1800000)
+}, 0)
