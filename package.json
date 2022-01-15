@@ -44,7 +44,7 @@
     "openbrowser": "^1.0.2",
     "request": "^2.85.0",
     "request-promise": "^4.2.4",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
