@@ -39,7 +39,7 @@
   "author": "lxfriday",
   "license": "MIT",
   "dependencies": {
-    "async": "^3.1.0",
+    "async": "^3.2.2",
     "chalk": "^2.4.2",
     "openbrowser": "^1.0.2",
     "request": "^2.85.0",
